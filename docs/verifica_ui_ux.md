@@ -55,3 +55,12 @@ Immagine allegata sostituita nella hero e ottimizzata in due risoluzioni (circa 
 ## Ruolo di Nicholas
 
 Testi di hero, servizi, metodo, impresa e FAQ aggiornati: Nicholas è l’artigiano che esegue i lavori in prima persona ed è anche il referente del cliente. Gli altri professionisti intervengono a supporto nelle lavorazioni specialistiche e nelle ristrutturazioni complete. Anteprima a 355 px: nessun overflow o testo tagliato.
+
+## Revisione dei testi — 14 ottobre 2026
+
+- Hero: Nicholas esegue le opere edili e organizza il cantiere; il cliente ha un unico referente anche nelle ristrutturazioni complete.
+- Titoli dei servizi, lavori e zona operativa resi descrittivi. Ridotte le ripetizioni e concentrati nel metodo i dettagli sul coordinamento e sugli impianti.
+- CTA della hero con indicazione visibile «Scrivici su WhatsApp»; destinazione invariata.
+- Nessuna località o promessa aggiunta ai singoli lavori senza documentazione. Recensioni, contatti, dati fiscali e metadati preservati.
+- Verifica in browser a 360, 390, 768 e 1440 px: nessun overflow. Menu mobile apre e chiude con Escape.
+- Controlli `git diff --check` e `node --check dist/app.js` superati. Sito statico: nessuna compilazione richiesta.
