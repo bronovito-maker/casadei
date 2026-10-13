@@ -42,10 +42,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
 .skip-link:focus { transform: translateY(0); }
 .site-header { position: sticky; top: 0; z-index: 30; background: var(--paper); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; gap: 30px; height: 98px; }
-.brand { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
-.brand img { width: 72px; height: 72px; object-fit: contain; }
-.brand>span { font-size: 23px; font-weight: 700; letter-spacing: .015em; line-height: 1.25; color: var(--navy); }
-.brand small { display: block; margin-top: 2px; font-size: 9px; letter-spacing: .16em; font-weight: 600; }
+.brand { display: inline-flex; align-items: center; min-height: 48px; padding-left: 13px; border-left: 3px solid var(--action); flex-shrink: 0; }
+.brand>span { font-size: 25px; font-weight: 700; letter-spacing: .015em; line-height: 1.25; color: var(--navy); }
+.brand small { display: block; margin-top: 3px; font-size: 10px; letter-spacing: .16em; font-weight: 600; }
 .main-nav { display: flex; align-items: center; gap: 25px; margin-left: auto; }
 .main-nav a { font-size: 14px; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; }
 .main-nav .nav-cta { display: none; }
@@ -55,6 +54,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
 .hero { padding-block: 50px 42px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 65px; align-items: center; }
 .hero h1 { max-width: 660px; }
 .hero h1 span { color: var(--navy); }
+.display-word { font-family: 'Iowan Old Style', Baskerville, 'Palatino Linotype', Georgia, serif; font-weight: 400; font-style: italic; font-size: 1.12em; letter-spacing: -.035em; line-height: .95; }
 .hero-description { max-width: 535px; color: var(--muted); margin-block: 24px 29px; font-size: 18px; line-height: 1.65; }
 .hero-actions { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
 .hero-actions .link-arrow { border: 0; }
@@ -62,10 +62,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
 .free-note>span { margin-right: 5px; color: var(--navy); }
 .hero-area { border-top: 1px solid var(--line); padding-top: 19px; margin-top: 25px; font-size: 14px; color: var(--muted); }
 .hero-area strong { font-weight: 500; color: var(--ink); }
-.hero-visual { position: relative; padding: 0 0 29px 23px; }
-.hero-floor { width: 100%; height: 468px; object-fit: cover; border-radius: var(--radius); }
-.hero-inset { position: absolute; left: -10px; bottom: 70px; width: 43%; height: 243px; object-fit: cover; border: 8px solid var(--paper); border-radius: var(--radius); }
-.hero-visual figcaption { display: flex; justify-content: space-between; gap: 16px; position: absolute; bottom: 0; left: 23px; right: 0; color: var(--muted); font-size: 11px; }
+.hero-visual { position: relative; padding: 0 0 29px; }
+.hero-floor { width: 100%; height: 468px; object-fit: cover; object-position: 67% center; border-radius: var(--radius); }
+.hero-visual figcaption { display: flex; justify-content: space-between; gap: 16px; position: absolute; bottom: 0; left: 0; right: 0; color: var(--muted); font-size: 11px; }
 .hero-visual figcaption span:first-child { font-weight: 600; color: var(--navy); }
 .value-line { display: flex; justify-content: space-between; gap: 20px; padding-block: 22px; border-block: 1px solid var(--line); }
 .value-line p { flex: 1; font-size: 15px; font-weight: 500; }
@@ -166,7 +165,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
   .hero { gap: 35px; padding-top: 38px; }
   .hero h1 { font-size: 48px; }
   .hero-floor { height: 440px; }
-  .hero-inset { height: 210px; }
   .section-heading { gap: 45px; }
   .services-layout { gap: 45px; }
   .service-photo img { height: 610px; }
@@ -182,9 +180,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
   .hero h1 { font-size: 40px; }
   .hero-description { font-size: 17px; margin-block: 18px 21px; }
   .hero-floor { height: 420px; }
-  .hero-inset { width: 52%; height: 175px; left: 0; }
-  .hero-visual { padding-left: 12px; }
-  .hero-visual figcaption { left: 12px; font-size: 10px; flex-wrap: wrap; gap: 2px; }
+  .hero-visual { padding-left: 0; }
+  .hero-visual figcaption { left: 0; font-size: 10px; flex-wrap: wrap; gap: 2px; }
   .hero-actions { gap: 10px; }
   .hero-actions .button { font-size: 14px; }
   .hero-area { font-size: 13px; }
@@ -217,16 +214,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
   .contact-list a { border-top: 1px solid #586C7A; }
   .contact-list strong { font-size: 19px; }
   .footer-main { gap: 22px; }
-  .site-footer .brand>span { display: none; }
   .footer-bottom { flex-wrap: wrap; }
 }
 @media (max-width:600px) {
   body { font-size: 17px; }
   html { scroll-padding-top: 94px; }
   .header-inner { height: 80px; gap: 12px; }
-  .brand { gap: 7px; }
-  .brand img { width: 56px; height: 56px; }
-  .brand>span { font-size: 19px; }
+  .brand { min-height: 44px; padding-left: 10px; }
+  .brand>span { font-size: 23px; }
   .brand small { font-size: 8px; letter-spacing: .09em; }
   .header-cta { display: none; }
   .menu-toggle { padding: 9px 11px; min-height: 44px; }
@@ -240,8 +235,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
   .free-note { font-size: 12px; margin-top: 8px; }
   .hero-area { font-size: 12px; margin-top: 10px; padding-top: 10px; }
   .hero-visual { padding: 0 0 23px; }
-  .hero-floor { height: 140px; object-fit: cover; }
-  .hero-inset { display: none; }
+  .hero-floor { height: auto; aspect-ratio: 16/9; object-fit: cover; object-position: center; }
   .hero-visual figcaption { left: 0; flex-wrap: nowrap; gap: 10px; font-size: 9px; }
   .value-line { gap: 12px; padding-block: 17px; }
   .value-line p { font-size: 11px; line-height: 1.6; }
@@ -290,7 +284,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
   .contact-list strong { font-size: 22px; }
   .contact .button { font-size: 14px; }
   .footer-main { grid-template-columns: 1fr; gap: 25px; padding-bottom: 28px; }
-  .site-footer .brand>span { display: block; }
   .footer-main p { font-size: 13px; }
   .footer-main>div { font-size: 15px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 13px; font-size: 11px; }
