@@ -195,7 +195,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
   .services-layout { grid-template-columns: .85fr 1fr; gap: 30px; }
   .service-list article { padding-block: 22px; }
   .service-list h3 { font-size: 23px; }
-  .service-list p { font-size: 16px; }
+  .service-list p { font-size: 17px; }
   .service-photo img { height: 650px; }
   .service-details { align-items: start; gap: 25px; }
   .project { grid-template-columns: 1fr; gap: 28px; }
@@ -206,7 +206,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid 
   .company-grid { gap: 32px; }
   .company figure img { height: 400px; }
   .company h2 { font-size: 32px; }
-  .company p:not(.eyebrow) { font-size: 16px; }
+  .company p:not(.eyebrow) { font-size: 17px; }
   .review-grid { gap: 40px; }
   .review-grid blockquote { font-size: 23px; }
   .area-grid { gap: 40px; }
